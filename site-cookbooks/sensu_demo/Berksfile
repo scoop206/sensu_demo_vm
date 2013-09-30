@@ -1,0 +1,6 @@
+site :opscode
+
+metadata
+
+cookbook 'redis', :git => 'https://github.com/miah/chef-redis.git'
+cookbook 'sensu', :git => 'git@github.com:sensu/sensu-chef.git'
