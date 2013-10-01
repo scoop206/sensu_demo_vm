@@ -53,7 +53,7 @@ end
 
 # run one check
 sensu_check "ntp-proc" do
-  command "check-procs.rb -p ntpd -W 1"
+  command "check-procs.rb -p ntpd -C 1"
   handlers ["default"]
   subscribers ["all"]
   interval 5
