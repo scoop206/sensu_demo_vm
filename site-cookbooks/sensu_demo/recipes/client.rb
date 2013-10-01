@@ -20,6 +20,9 @@
 
 include_recipe "sensu_demo"
 
+# install ntp
+include_recipe "ntp"
+
 sensu_client node.name do
     address node.ipaddress
     subscriptions node.roles + ["all"]
