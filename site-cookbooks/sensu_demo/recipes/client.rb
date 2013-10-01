@@ -48,4 +48,12 @@ directory "/var/cache/check-log" do
   owner "sensu"
 end
 
+# run one check
+sensu_check "ntp-proc" do
+  command "check-procs.rb -p ntpd -W 1"
+  handlers ["default"]
+  subscribers["all"]
+  interval 60
+end
+
 include_recipe "sensu::client_service"
